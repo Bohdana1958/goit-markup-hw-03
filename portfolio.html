@@ -10,65 +10,73 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
       <!-- Logo -->
-      <nav class="list">
-        <a class="link logo" href="./index.html"
-          >Web<span class="studio">Studio</span></a
-        >
-        <ul class="list">
-          <li>
-            <a class="link link-menu" href="./index.html">Studio</a>
-          </li>
-          <li>
-            <a class="link link-menu" href="./portfolio.html">Portfolio</a>
-          </li>
-          <li>
-            <a class="link link-menu" href="">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-      <address class="address">
-        <ul class="list">
-          <li>
-            <a class="link link-address" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+      <div class="container header-container">
+        <nav class="list nav-list">
+            <a class="link logo" href="./index.html"
+              >Web<span class="studio">Studio</span></a
             >
-          </li>
-          <li>
-            <a class="link link-address" href="tel:+110001111111"
-              >+11 (000) 111-11-11</a
-            >
-          </li>
-        </ul>
-      </address>
+            <ul class="header-list list">
+              <li>
+                <a class="link link-menu" href="./index.html">Studio</a>
+              </li>
+              <li>
+                <a class="link link-menu" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a class="link link-menu" href="">Contacts</a>
+              </li>
+            </ul>
+        </nav>
+        <address class="address">
+          <ul class="list address-list">
+            <li>
+              <a class="link link-address" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="link link-address" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+          
     </header>
     <main>
       <section>
-        <h1 hidden>Portfolio</h1>
+        <div class="container">
+        <h1 class="visually-hidden">Portfolio</h1>
         <!--Filters -->
-        <ul class="list">
-          <li>
-            <button class="filters-btn" type="button">All</button>
-          </li>
-          <li>
-            <button class="filters-btn" type="button">Web Site</button>
-          </li>
-          <li>
-            <button class="filters-btn" type="button">App</button>
-          </li>
-          <li>
-            <button class="filters-btn" type="button">Design</button>
-          </li>
-          <li>
-            <button class="filters-btn" type="button">Marketing</button>
-          </li>
-        </ul>
+        
+            <ul class="list list-filters">
+              <li>
+                <button class="filters-btn button" type="button">All</button>
+              </li>
+              <li>
+                <button class="filters-btn button btn" type="button">Web Site</button>
+              </li>
+              <li>
+                <button class="filters-btn button" type="button">App</button>
+              </li>
+              <li>
+                <button class="filters-btn button" type="button">Design</button>
+              </li>
+              <li>
+                <button class="filters-btn button" type="button">Marketing</button>
+              </li>
+            </ul>
+        
         <!--Option-->
-        <ul class="list">
+        <ul class="list option-list">
           <li>
             <a class="link" href="#">
               <img
@@ -78,8 +86,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Banking App Interface Concept</h2>
-              <p class="option-text">App</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Banking App Interface Concept</h2>
+                <p class="option-text">App</p>
+              </div>
             </a>
           </li>
           <li>
@@ -91,8 +101,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Cashless Payment</h2>
-              <p class="option-text">Marketing</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Cashless Payment</h2>
+                <p class="option-text">Marketing</p>
+              </div>
             </a>
           </li>
           <li>
@@ -104,8 +116,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Meditation App</h2>
-              <p class="option-text">App</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Meditation App</h2>
+                <p class="option-text">App</p>
+              </div>
             </a>
           </li>
           <li>
@@ -117,8 +131,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Taxi Service</h2>
-              <p class="option-text">Marketing</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Taxi Service</h2>
+                <p class="option-text">Marketing</p>
+              </div>
             </a>
           </li>
           <li>
@@ -130,8 +146,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Screen Illustrations</h2>
-              <p class="option-text">Design</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Screen Illustrations</h2>
+                <p class="option-text">Design</p>
+              </div>
             </a>
           </li>
           <li>
@@ -143,8 +161,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Online Courses</h2>
-              <p class="option-text">Marketing</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Online Courses</h2>
+                <p class="option-text">Marketing</p>
+              </div>
             </a>
           </li>
           <li>
@@ -156,8 +176,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Instagram Stories Concept</h2>
-              <p class="option-text">Design</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Instagram Stories Concept</h2>
+                <p class="option-text">Design</p>
+              </div>
             </a>
           </li>
           <li>
@@ -169,8 +191,10 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Organic Food</h2>
-              <p class="option-text">Web Site</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Organic Food</h2>
+                <p class="option-text">Web Site</p>
+              </div>
             </a>
           </li>
           <li>
@@ -182,21 +206,26 @@
                 width="360"
                 height="300"
               />
-              <h2 class="option-title">Fresh Coffee</h2>
-              <p class="option-text">Web Site</p>
+              <div class="option-wrapper">
+                <h2 class="option-title">Fresh Coffee</h2>
+                <p class="option-text">Web Site</p>
+              </div>
             </a>
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <footer class="list-footer">
-      <a class="link logo" href="./index.html"
-        >Web<span class="logos-studios">Studio</span></a
-      >
-      <p class="logos-text">
-        Increase the flow of customers and sales for your business with digital
-        marketing & growth solutions.
-      </p>
+      <div class="container footer-container">
+        <a class="logo-footer link logo" href="./index.html"
+          >Web<span class="logos-studios">Studio</span></a
+        >
+        <p class="logos-text">
+          Increase the flow of customers and sales for your business with
+          digital marketing & growth solutions.
+        </p>
+      </div>
     </footer>
   </body>
 </html>

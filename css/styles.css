@@ -15,6 +15,18 @@
   --title-font: 'Roboto', sans-serif;
   --slate: #434455;
 }
+
+/**
+  |============================
+  |Base style
+  |============================
+*/
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: Regular;
@@ -25,9 +37,78 @@ body {
   letter-spacing: 2%;
   color: #434455;
   background-color: var(--white-background-color);
+  margin: 0;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.link {
+  color: currentColor;
+  text-decoration: none;
+}
+.button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.title {
+  color: var(--navy-blue, #2e2f42);
+  text-align: center;
+  font-family: var(--title-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  width: 333px;
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
 
 /**
@@ -35,6 +116,21 @@ ul {
   | Header
   |============================
 */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+}
 
 .logo {
   color: var(--iris, #4d5ae5);
@@ -46,9 +142,11 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+  margin-right: 76px;
 }
 .link {
   text-decoration: none;
+  display: inline-block;
 }
 .studio {
   color: var(--navy-blue, #2e2f42);
@@ -59,6 +157,7 @@ ul {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 .list {
   color: var(--navy-blue, #2e2f42);
@@ -91,6 +190,11 @@ ul {
   text-decoration: none;
 }
 
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+
 .address .link-address:hover,
 .address .link-address:focus {
   color: var(--ocean, #404bbf);
@@ -113,8 +217,16 @@ ul {
   | Hero
   |============================
 */
-.list-hero {
+.hero-container {
+  padding: 188px 472px 292px;
   background-color: var(--navy-blue, #2e2f42);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-hero {
+  padding-bottom: 60px;
 }
 .hero-title {
   font-family: var(--title-font);
@@ -124,6 +236,8 @@ ul {
   color: var(--white, #fff);
   text-align: center;
   letter-spacing: 1.12px;
+  width: 496px;
+  margin-bottom: 48px;
 }
 .hero-btn {
   font-family: var(--title-font);
@@ -134,7 +248,13 @@ ul {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
   cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  border: 0px;
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--ocean, #404bbf);
@@ -144,6 +264,13 @@ ul {
   | Advantages
   |============================
 */
+.advantages-list {
+  display: flex;
+  gap: 24px;
+}
+.advantages-item {
+  flex-basis: calc((100% - 24px * 3) / 4);
+}
 
 .advantages-item-title {
   font-family: var(--title-font);
@@ -152,6 +279,7 @@ ul {
   line-height: 1.2; /* 120% */
   color: var(--navy-blue, #2e2f42);
   letter-spacing: 0.4px;
+  margin-bottom: 8px;
 }
 .advantages-item-text {
   font-family: var(--title-font);
@@ -165,17 +293,35 @@ ul {
   | Works
   |============================
 */
+.works-list {
+  display: flex;
+  gap: 24px;
+}
 
 /**
   |============================
   | Team
   |============================
 */
-.list-team {
+
+.team-section {
   background-color: #f4f4fd;
 }
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-wrapper {
+  padding-bottom: 32px;
+}
 .team-item {
-  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--white, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-item-title {
   font-family: var(--title-font);
@@ -186,6 +332,7 @@ ul {
   background-color: #ffffff;
   text-align: center;
   letter-spacing: 0.4px;
+  margin-bottom: 8px;
 }
 .team-item-text {
   font-size: 16px;
@@ -194,15 +341,9 @@ ul {
   text-align: center;
   letter-spacing: 0.32px;
 }
-.title {
-  color: var(--navy-blue, #2e2f42);
-  text-align: center;
-  font-family: var(--title-font);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11; /* 111.111% */
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
+
+.team-item-img {
+  margin-bottom: 32px;
 }
 
 /**
@@ -222,11 +363,22 @@ ul {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border-radius: 4px;
 }
+
 .filters-btn:hover,
 .filters-btn:focus {
   background-color: #404bbf;
   color: #ffffff;
+}
+
+.list-filters {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 96px;
+  margin-bottom: 72px;
 }
 
 /**
@@ -235,6 +387,18 @@ ul {
   |============================
 */
 
+.option-wrapper {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+  padding: 32px 16px;
+}
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  margin-bottom: 120px;
+}
+
 .option-title {
   color: var(--navy-blue, #2e2f42);
   font-size: 20px;
@@ -242,6 +406,7 @@ ul {
   line-height: 1.2; /* 120% */
   letter-spacing: 0.02em;
   text-transform: none;
+  margin-bottom: 8px;
 }
 .option-text {
   color: var(--slate, #434455);
@@ -257,8 +422,14 @@ ul {
   | Footer
   |============================
 */
+.logo-footer {
+  margin-bottom: 17.5px;
+}
 .list-footer {
   background: var(--navy-blue, #2e2f42);
+  width: 264;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .logos-studios {
   color: #f4f4fd;
@@ -276,4 +447,5 @@ ul {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
+  width: 264px;
 }
