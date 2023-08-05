@@ -231,6 +231,7 @@ img {
   text-align: center;
   letter-spacing: 1.12px;
   max-width: 496px;
+  margin: auto;
   margin-bottom: 48px;
 }
 .hero-btn {
@@ -289,7 +290,7 @@ img {
   | Works
   |============================
 */
-.works-section {
+.work-section {
   padding-bottom: 120px;
 }
 .works-list {
