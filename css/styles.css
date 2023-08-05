@@ -93,8 +93,7 @@ img {
   padding-right: 15px;
 }
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 120px 0;
 }
 
 .title {
@@ -133,8 +132,6 @@ img {
 .header-list {
   display: flex;
   gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .logo {
@@ -172,14 +169,6 @@ img {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
 }
-.link-menu {
-  color: var(--navy-blue, #2e2f42);
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5; /* 150% */
-  letter-spacing: 0.02em;
-}
 
 .list .link-menu:hover,
 .list .link-menu:focus {
@@ -190,9 +179,10 @@ img {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% */
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   color: var(--navy-blue, #2e2f42);
   text-decoration: none;
+  padding: 24px 0;
 }
 
 .address-list {
@@ -224,16 +214,13 @@ img {
   | Hero
   |============================
 */
-.hero-container {
-  padding: 188px 472px 292px;
+
+.list-hero {
+  padding: 188px 0;
   background-color: var(--navy-blue, #2e2f42);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.list-hero {
-  padding-bottom: 60px;
 }
 .hero-title {
   font-family: var(--title-font);
@@ -243,7 +230,7 @@ img {
   color: var(--white, #fff);
   text-align: center;
   letter-spacing: 1.12px;
-  width: 496px;
+  max-width: 496px;
   margin-bottom: 48px;
 }
 .hero-btn {
@@ -258,8 +245,10 @@ img {
   padding: 16px 32px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
+  margin: auto;
   border: 0px;
+  min-width: 169px;
+  display: block;
 }
 
 .hero-btn:hover,
@@ -300,6 +289,9 @@ img {
   | Works
   |============================
 */
+.works-section {
+  padding-bottom: 120px;
+}
 .works-list {
   display: flex;
   gap: 24px;
@@ -321,7 +313,7 @@ img {
 }
 
 .team-wrapper {
-  padding-bottom: 32px;
+  padding: 32px 0;
 }
 .team-item {
   border-radius: 0px 0px 4px 4px;
@@ -355,6 +347,17 @@ img {
 
 /**
   |============================
+  | Section Portfolio
+  |============================
+*/
+
+.portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/**
+  |============================
   | Filters
   |============================
 */
@@ -378,13 +381,14 @@ img {
 .filters-btn:focus {
   background-color: #404bbf;
   color: #ffffff;
+  border: 1px solid transparent;
 }
 
 .list-filters {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-top: 96px;
+
   margin-bottom: 72px;
 }
 
@@ -398,12 +402,16 @@ img {
   border: 1px solid var(--cornflower, #e7e9fc);
   background: var(--white, #fff);
   padding: 32px 16px;
+  border-top: none;
 }
 .option-list {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  margin-bottom: 120px;
+}
+
+.option-item {
+  width: calc((100% - 48px) / 3);
 }
 
 .option-title {
@@ -430,7 +438,7 @@ img {
   |============================
 */
 .logo-footer {
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
 }
 .list-footer {
   background: var(--navy-blue, #2e2f42);
